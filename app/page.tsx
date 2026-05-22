@@ -39,6 +39,29 @@ const BRAND = {
   keywords: ["lab-grown diamonds", "sustainable luxury", "precision cut", "ethical diamonds", "engagement rings"],
 }
 
+// Active campaign — this is the lens every post should be written through.
+// All GENERATED_CONTENT below references this event explicitly.
+const EVENT = {
+  name: "JCK Las Vegas Show 2026",
+  shortName: "JCK 2026",
+  booth: "#7141",
+  yearsExhibiting: 10,
+  sinceYear: 2016,
+  tagline: "Setting new benchmarks in quality, transparency, and customization for the global diamond trade.",
+  debuting: [
+    "Most distinguished and expansive collection to date",
+    "GCAL 8X certified diamonds — IF clarity, D-E color",
+    "HPHT lab-grown stones and fancy coloured diamonds",
+    "Bespoke Diamond Creation Services (NEW)",
+  ],
+  audience: "Retailers, designers, wholesale buyers, and jewelry houses",
+  cta: "Book a private booth visit",
+  phone: "+1-646-362-6678",
+  whatsapp: "+1-646-362-6678",
+  registerUrl: "growndiamondcorp.com/register",
+  hashtags: "#JCKLasVegas2026 #JCK2026 #Booth7141 #LabGrownDiamonds #GrownDiamondCorp",
+}
+
 const PLATFORMS = [
   { id: "instagram", name: "Instagram", icon: "IG", color: "from-pink-500 to-purple-600", followers: "24.8K", posts: 342 },
   { id: "tiktok", name: "TikTok", icon: "TT", color: "from-gray-900 to-gray-700", followers: "12.1K", posts: 89 },
@@ -49,46 +72,100 @@ const PLATFORMS = [
   { id: "email", name: "Email", icon: "@", color: "from-emerald-600 to-teal-700", followers: "18.2K", posts: 124 },
 ]
 
+// Native aspect ratio of each platform's preview frame.
+// Images are sized to match their natural ratio so nothing crops.
+//   image1.png      1792×2400  (3:4 portrait)
+//   image2.png      1254×1254  (1:1 square)
+//   aimage3.png      941×1672  (9:16 tall portrait)
+//   aimage6.png     1672× 941  (16:9 landscape)
+//   aimage8.png     1254×1254  (1:1 square)
+//   ReplaceImage2   1792×2400  (3:4 portrait)
+//   video1/2.mp4    9:16 vertical
 const GENERATED_CONTENT: Record<string, any> = {
   instagram: {
     type: "Reel",
     image: "/demo/image1.png",
     video: "/demo/video1.mp4",
-    caption: "A Fire So Intense, It's the Only Statement You Need. Our precision-cut lab-grown diamonds capture light like no other. Every facet engineered for brilliance that turns heads.",
-    hashtags: "#LabGrownDiamonds #SustainableLuxury #DiamondRing #EngagementRing #LuxuryJewelry #GrownDiamond #EthicalDiamonds #PrecisionCut #FineJewelry #ModernLuxury",
+    previewAspect: "9 / 16",
+    previewMaxWidth: 280,
+    caption: "10 Years. One Booth. Endless Brilliance. ✨\n\nWe're back at JCK Las Vegas 2026 — Booth #7141 — with our most distinguished collection yet, GCAL 8X certified IF-clarity stones, and a brand-new chapter: Bespoke Diamond Creation Services.\n\nThis is the year we don't just exhibit. We redefine.",
+    hashtags: "#JCKLasVegas2026 #JCK2026 #Booth7141 #LabGrownDiamonds #GrownDiamondCorp #GCAL8X #BespokeDiamonds #LuxuryJewelry #SustainableLuxury #DiamondShow",
   },
   tiktok: {
     type: "Short Video",
     image: "/demo/image2.png",
     video: "/demo/video2.mp4",
-    caption: "POV: You just found out lab-grown diamonds are identical to mined diamonds but cost 40% less. The brilliance? Unmatched.",
-    hashtags: "#labgrowndiamonds #diamonds #engagement #luxury #diamondring #fyp #viral",
+    previewAspect: "9 / 16",
+    previewMaxWidth: 280,
+    caption: "POV: It's our 10th year at JCK Las Vegas. This time we're not just bringing diamonds — we're bringing bespoke. Booth #7141. Come see what a decade of obsession looks like.",
+    hashtags: "#JCK2026 #LasVegas #labgrowndiamonds #diamondshow #booth7141 #fyp #behindthescenes #luxury",
   },
   linkedin: {
-    type: "Text Post",
+    type: "Text + Image",
     image: "/demo/aimage3.png",
-    text: "The future of luxury is lab-grown.\n\nAt Grown Diamond Corporation, we've spent years perfecting the art of creating diamonds that are optically, chemically, and physically identical to mined stones.\n\nThe difference?\n- 40% lower cost for consumers\n- Zero mining environmental impact\n- Every facet cut with AI-guided precision\n- Full traceability from seed to setting\n\nThe luxury industry is evolving. The question isn't whether lab-grown diamonds will dominate — it's when.\n\nWhat's your take on sustainable luxury?",
+    previewAspect: "9 / 16",
+    previewMaxWidth: 300,
+    text: "10 years at JCK Las Vegas. One mission: redefine what luxury can mean.\n\nSince 2016, Grown Diamond Corporation has returned to the JCK floor every year — bringing our patented growing process, master-cut polished stones from Surat, and the conviction that lab-grown isn't an alternative. It's the standard.\n\nThis year at Booth #7141, we're unveiling:\n\n→ Our most distinguished and expansive collection to date\n→ GCAL 8X certified diamonds — IF clarity, D–E color\n→ HPHT lab-grown stones and fancy coloured diamonds\n→ A new chapter: Bespoke Diamond Creation Services — your design, our growers, our cutters\n\nWe're actively expanding our global retail and wholesale partner network. If you're a buyer, designer, or retailer attending JCK 2026, we'd be honoured to host you privately at the booth.\n\nBook a meeting: +1-646-362-6678\n\nSee you in Vegas.",
   },
   x: {
     type: "Tweet",
     image: null,
-    text: 'Lab-grown diamonds aren\'t "fake." They\'re the same carbon crystal structure, same hardness, same fire.\n\nThe only difference? No mining. No conflict. 40% less cost.\n\nThe future of luxury is sustainable. And it\'s already here.',
+    text: "10 years at JCK. Same mission. Bigger booth.\n\nThis year we're back at #7141 with our most expansive collection yet, GCAL 8X IF-clarity diamonds, and a brand-new Bespoke Diamond Creation Service.\n\nLab-grown isn't the alternative. It's the standard. ✨",
   },
   facebook: {
     type: "Image Post",
     image: "/demo/image2.png",
-    caption: "When the Eyes Recognize Perfection. True brilliance leaves no room for doubt. Discover the precision behind every Grown Diamond.",
-    hashtags: "#LabGrownDiamonds #SustainableLuxury #PrecisionCraft",
+    previewAspect: "1 / 1",
+    previewMaxWidth: 380,
+    caption: "10 Years at JCK Las Vegas · Booth #7141 💎\n\nSince 2016, we've returned every year to show the world what lab-grown can be. This year, we're bringing our most distinguished collection, GCAL 8X certified IF-clarity stones, and a brand-new Bespoke Diamond Creation Service.\n\nAttending JCK 2026? DM us to book a private booth visit — or call +1-646-362-6678.",
+    hashtags: "#JCK2026 #Booth7141 #LabGrownDiamonds #GrownDiamondCorp #JCKLasVegas",
   },
   blog: {
     type: "Blog Post",
     image: "/demo/aimage6.png",
-    text: "Why Lab-Grown Diamonds Are the Future of Luxury\n\nThe diamond industry is undergoing a revolution. For decades, the narrative was simple: diamonds come from the earth, and that's what makes them precious. But science has changed the game.\n\nAt Grown Diamond Corporation, we create diamonds that are optically, chemically, and physically identical to mined stones. The difference? Our process eliminates the environmental devastation of mining, removes the ethical concerns of conflict diamonds, and passes a 40% cost savings directly to consumers.\n\nThe Science Behind the Sparkle\n\nUsing Chemical Vapor Deposition (CVD), we recreate the exact conditions that form diamonds deep within the earth — but in a controlled laboratory. The result is a gem with the same carbon crystal structure, the same hardness (10 on the Mohs scale), and the same fire and brilliance.\n\nEvery facet is cut with AI-guided precision, ensuring each stone achieves maximum light performance. Our master gemologists then inspect every diamond by hand.\n\nThe Numbers Don't Lie\n\n• 40% lower cost than equivalent mined diamonds\n• Zero mining environmental impact\n• Full traceability from seed crystal to finished setting\n• Identical GIA certification standards\n\nThe luxury industry is evolving. Consumers are demanding transparency, sustainability, and value — without compromising on beauty. Lab-grown diamonds deliver on all three.\n\nThe question isn't whether lab-grown diamonds will become the standard. It's when.",
+    previewAspect: "16 / 9",
+    previewMaxWidth: 520,
+    text: "10 Years at JCK Las Vegas: What We're Bringing to Booth #7141 in 2026\n\nIn 2016, Grown Diamond Corporation walked onto the JCK Las Vegas floor for the first time. We arrived with a single conviction: lab-grown diamonds aren't an alternative to mined stones — they're the next standard for luxury. A decade later, we're still here. And we're not slowing down.\n\nJCK 2026 marks our tenth consecutive year at the show. We're using that milestone to set new benchmarks — in quality, in transparency, and in customization for the global diamond trade.\n\nHere's what's debuting at Booth #7141.\n\nOur Most Distinguished Collection to Date\n\nThis year's collection is the largest and most refined we've ever assembled. Premium jewelry pieces in VVS clarity, D–E color. GCAL 8X certified diamonds in IF (Internally Flawless) clarity. HPHT-grown stones engineered for exceptional fire. Fancy coloured diamonds — pinks, blues, yellows — grown to spec.\n\nEvery stone is cut in our Surat facility by master cutters with 15+ years of experience, using AI-guided precision to maximise light performance facet by facet.\n\nIntroducing: Bespoke Diamond Creation Services\n\nThe biggest news of JCK 2026 is our new Bespoke Diamond Creation Service. For the first time, retail and wholesale partners can commission diamonds built to spec — your size, your colour, your clarity, your cut. We grow it. We cut it. We deliver it.\n\nThis is the natural extension of holding international patents on the diamond growing process: total control from seed crystal to finished stone, now available as a customisation service.\n\nWho We Want to Meet at JCK 2026\n\nWe're actively expanding our global retail and wholesale partner network. If you're:\n\n• A retailer adding or expanding a lab-grown line\n• A designer sourcing exceptional stones for custom work\n• A buyer for a department store or e-commerce brand\n• A jewelry house exploring bespoke partnerships\n\n…we'd love to host you privately at Booth #7141.\n\nWhy JCK Still Matters\n\nJCK Las Vegas isn't just a trade show. It's where the global jewelry industry meets to decide what the next year looks like. A decade of returning to this floor has taught us one thing: the conversations that happen here shape what consumers buy back home.\n\nThat's why we're bringing not just stones, but a point of view. Lab-grown is the standard. Bespoke is the future. And every piece we make is made to last.\n\nBook a Booth Visit\n\nReserve a private slot at Booth #7141 by calling +1-646-362-6678 or messaging us on WhatsApp at the same number. We'll block off your preferred time and walk you through the full collection.\n\nSee you in Vegas.",
   },
   email: {
     type: "Newsletter",
     image: "/demo/aimage8.png",
-    text: "Subject: The Diamond That Changes Everything\n\nHi [First Name],\n\nWe wanted to share something special with you.\n\nOur latest collection features precision-cut lab-grown diamonds that rival any mined stone in brilliance, fire, and beauty — at 40% less cost.\n\nHere's what makes them different:\n\n→ Same carbon crystal structure as mined diamonds\n→ AI-guided cutting for maximum light performance\n→ Zero environmental mining impact\n→ Full GIA certification\n\nWhether you're looking for the perfect engagement ring or a statement piece that reflects your values, our collection has something extraordinary waiting for you.\n\nExplore the Collection →\n\nWarm regards,\nThe Grown Diamond Team\n\nP.S. For a limited time, enjoy complimentary shipping on all orders over $500.",
+    previewAspect: "1 / 1",
+    previewMaxWidth: 380,
+    text: "Subject: Meet us at JCK 2026 — Booth #7141\n\nHi [First Name],\n\nTen years ago, we exhibited at our first JCK Las Vegas Show. This year, we're returning to Booth #7141 — and we're bringing more than ever.\n\nWhat's debuting at JCK 2026:\n\n→ Our most distinguished and expansive collection to date\n→ GCAL 8X certified diamonds — IF clarity, D–E color\n→ HPHT-grown stones and fancy coloured diamonds\n→ A new chapter: Bespoke Diamond Creation Services\n\nWhether you're a retailer expanding your lab-grown offering, a designer sourcing exceptional stones, or a buyer who wants diamonds built to your exact spec — we'd love to host you privately at the booth.\n\nBook a Booth Visit →\n\nWarm regards,\nThe Grown Diamond Team\n\nP.S. Reply to this email or call +1-646-362-6678 — our team will block off your preferred time at Booth #7141. We're also on WhatsApp at the same number.",
+  },
+}
+
+// Audience hint + brief-input placeholder shown in the per-platform planning form.
+// Placeholders all assume the JCK 2026 campaign is the active focus.
+const PLATFORM_PROMPTS: Record<string, { audience: string; placeholder: string }> = {
+  instagram: {
+    audience: "Aspirational buyers · women 25–40 · trade-show curious",
+    placeholder: "What should this Reel show? e.g. 'Macro shots of the GCAL 8X IF stones with a Booth #7141 reveal at the end. Hook with sparkle, close with the 10-year anniversary line.'",
+  },
+  tiktok: {
+    audience: "Gen Z · trade-show insiders · trend-driven",
+    placeholder: "Format and angle? e.g. 'POV walking into Booth #7141, behind-the-scenes of Surat cutters, founder reaction to the bespoke launch. Punchy edits, trending audio.'",
+  },
+  linkedin: {
+    audience: "Retailers · wholesale buyers · designers · jewelry houses",
+    placeholder: "Thought-leadership angle? e.g. 'Why bespoke is the next chapter for lab-grown. 10-year retrospective + invite partners to book a private booth visit.'",
+  },
+  x: {
+    audience: "Jewelry insiders · industry press · JCK attendees",
+    placeholder: "Tone / hot take? e.g. 'Contrarian one-liners on mined-vs-lab + booth tease. Threads on what's new at #7141: GCAL 8X, HPHT, bespoke.'",
+  },
+  facebook: {
+    audience: "Older buyers · community · returning JCK contacts",
+    placeholder: "Community angle? e.g. 'Family heirloom story tied to our 10-year journey. Warm visuals, invite local retailers to DM for a booth slot.'",
+  },
+  blog: {
+    audience: "SEO buyers · trade press · partners researching us",
+    placeholder: "Topic + depth? e.g. '10 years at JCK retrospective, the bespoke launch, certifications explained (GCAL 8X / IF / HPHT). 800-1200 words, link to register page.'",
+  },
+  email: {
+    audience: "Existing partners · past inquirers · JCK list",
+    placeholder: "Persona + ask? e.g. 'Past inquirers and current retailers — invite them to book a private booth slot at #7141. Reference what's debuting + phone/WhatsApp.'",
   },
 }
 
@@ -121,57 +198,57 @@ function getNextWeekDates() {
 
 const WEEK_DATES = getNextWeekDates()
 
-// Each day = one topic, adapted per platform format
+// JCK 2026 countdown — each day frames the booth from a different angle.
 const DAILY_TOPICS = [
-  { day: 0, topic: "Cushion-Cut Halo Ring — 2.5ct E VVS1", emoji: "💍" },
-  { day: 1, topic: "Lab-Grown vs Mined: The Science", emoji: "🔬" },
-  { day: 2, topic: "Pear-Cut Solitaire — 3ct D IF", emoji: "💎" },
-  { day: 3, topic: "Behind the Lab: CVD Process", emoji: "🏭" },
-  { day: 4, topic: "Engagement Ring Trends 2026", emoji: "💒" },
-  { day: 5, topic: "Oval Brilliant — 1.8ct F VS1", emoji: "✨" },
-  { day: 6, topic: "Customer Story: Sarah's Ring", emoji: "❤️" },
+  { day: 0, topic: "JCK 2026 Reveal — Booth #7141",                emoji: "🎪" },
+  { day: 1, topic: "10 Years at JCK — Our Anniversary Story",      emoji: "🎉" },
+  { day: 2, topic: "GCAL 8X · IF Clarity Collection",              emoji: "💎" },
+  { day: 3, topic: "Bespoke Diamond Creation — NEW at JCK",        emoji: "✨" },
+  { day: 4, topic: "Inside Surat — Meet Our Master Cutters",       emoji: "🏭" },
+  { day: 5, topic: "Fancy Coloured + HPHT Highlights",             emoji: "🌈" },
+  { day: 6, topic: "How to Book a Private Booth Visit",            emoji: "📅" },
 ]
 
 const DEFAULT_SCHEDULE: { day: number; time: string; platform: string; content: string; status: string }[] = [
-  // Day 0: Cushion-Cut Halo Ring
-  { day: 0, time: "7:30 PM", platform: "instagram", content: "Cushion-Cut Halo Ring — Reel", status: "scheduled" },
-  { day: 0, time: "8:00 PM", platform: "tiktok", content: "Cushion-Cut Halo Ring — Short", status: "scheduled" },
-  { day: 0, time: "12:00 PM", platform: "x", content: "Cushion-Cut Halo Ring — Tweet", status: "scheduled" },
-  { day: 0, time: "1:00 PM", platform: "facebook", content: "Cushion-Cut Halo Ring — Image Post", status: "scheduled" },
-  // Day 1: Lab-Grown vs Mined
-  { day: 1, time: "9:00 AM", platform: "linkedin", content: "Lab-Grown vs Mined — Article", status: "scheduled" },
-  { day: 1, time: "10:00 AM", platform: "blog", content: "Lab-Grown vs Mined — Blog Post", status: "scheduled" },
-  { day: 1, time: "12:00 PM", platform: "x", content: "Lab-Grown vs Mined — Thread", status: "scheduled" },
-  { day: 1, time: "7:30 PM", platform: "instagram", content: "Lab-Grown vs Mined — Reel", status: "scheduled" },
-  { day: 1, time: "8:00 PM", platform: "tiktok", content: "Lab-Grown vs Mined — Short", status: "scheduled" },
-  // Day 2: Pear-Cut Solitaire
-  { day: 2, time: "7:30 PM", platform: "instagram", content: "Pear-Cut Solitaire — Reel", status: "scheduled" },
-  { day: 2, time: "8:00 PM", platform: "tiktok", content: "Pear-Cut Solitaire — Short", status: "scheduled" },
-  { day: 2, time: "1:00 PM", platform: "facebook", content: "Pear-Cut Solitaire — Image Post", status: "scheduled" },
-  { day: 2, time: "12:00 PM", platform: "x", content: "Pear-Cut Solitaire — Tweet", status: "scheduled" },
-  // Day 3: Behind the Lab
-  { day: 3, time: "9:00 AM", platform: "linkedin", content: "Behind the Lab — Article", status: "scheduled" },
-  { day: 3, time: "10:00 AM", platform: "email", content: "Behind the Lab — Newsletter", status: "scheduled" },
-  { day: 3, time: "12:00 PM", platform: "x", content: "Behind the Lab — Thread", status: "scheduled" },
-  { day: 3, time: "7:30 PM", platform: "instagram", content: "Behind the Lab — Reel", status: "scheduled" },
-  { day: 3, time: "8:00 PM", platform: "tiktok", content: "Behind the Lab — Short", status: "scheduled" },
-  // Day 4: Engagement Ring Trends
-  { day: 4, time: "10:00 AM", platform: "blog", content: "Engagement Ring Trends — Blog Post", status: "scheduled" },
-  { day: 4, time: "9:00 AM", platform: "linkedin", content: "Engagement Ring Trends — Article", status: "scheduled" },
-  { day: 4, time: "1:00 PM", platform: "facebook", content: "Engagement Ring Trends — Image Post", status: "scheduled" },
-  { day: 4, time: "7:30 PM", platform: "instagram", content: "Engagement Ring Trends — Carousel", status: "scheduled" },
-  { day: 4, time: "8:00 PM", platform: "tiktok", content: "Engagement Ring Trends — Short", status: "scheduled" },
-  // Day 5: Oval Brilliant
-  { day: 5, time: "7:30 PM", platform: "instagram", content: "Oval Brilliant — Reel", status: "scheduled" },
-  { day: 5, time: "8:00 PM", platform: "tiktok", content: "Oval Brilliant — Short", status: "scheduled" },
-  { day: 5, time: "12:00 PM", platform: "x", content: "Oval Brilliant — Tweet", status: "scheduled" },
-  { day: 5, time: "1:00 PM", platform: "facebook", content: "Oval Brilliant — Image Post", status: "scheduled" },
-  // Day 6: Customer Story
-  { day: 6, time: "9:00 AM", platform: "email", content: "Sarah's Ring Story — Newsletter", status: "scheduled" },
-  { day: 6, time: "10:00 AM", platform: "blog", content: "Sarah's Ring Story — Blog Post", status: "scheduled" },
-  { day: 6, time: "7:30 PM", platform: "instagram", content: "Sarah's Ring Story — Reel", status: "scheduled" },
-  { day: 6, time: "12:00 PM", platform: "x", content: "Sarah's Ring Story — Tweet", status: "scheduled" },
-  { day: 6, time: "1:00 PM", platform: "facebook", content: "Sarah's Ring Story — Image Post", status: "scheduled" },
+  // Day 0: JCK Reveal
+  { day: 0, time: "7:30 PM", platform: "instagram", content: "Booth #7141 Reveal — Reel",         status: "scheduled" },
+  { day: 0, time: "8:00 PM", platform: "tiktok",    content: "Booth #7141 Reveal — Short",        status: "scheduled" },
+  { day: 0, time: "12:00 PM", platform: "x",        content: "Booth #7141 Reveal — Tweet",        status: "scheduled" },
+  { day: 0, time: "1:00 PM", platform: "facebook",  content: "Booth #7141 Reveal — Image Post",   status: "scheduled" },
+  // Day 1: 10 Years at JCK
+  { day: 1, time: "9:00 AM",  platform: "linkedin", content: "10 Years at JCK — Article",         status: "scheduled" },
+  { day: 1, time: "10:00 AM", platform: "blog",     content: "10 Years at JCK — Blog Post",       status: "scheduled" },
+  { day: 1, time: "12:00 PM", platform: "x",        content: "10 Years at JCK — Thread",          status: "scheduled" },
+  { day: 1, time: "7:30 PM",  platform: "instagram",content: "10 Years at JCK — Reel",            status: "scheduled" },
+  { day: 1, time: "8:00 PM",  platform: "tiktok",   content: "10 Years at JCK — Short",           status: "scheduled" },
+  // Day 2: GCAL 8X / IF Clarity
+  { day: 2, time: "7:30 PM",  platform: "instagram",content: "GCAL 8X · IF Clarity — Reel",       status: "scheduled" },
+  { day: 2, time: "8:00 PM",  platform: "tiktok",   content: "GCAL 8X · IF Clarity — Short",      status: "scheduled" },
+  { day: 2, time: "1:00 PM",  platform: "facebook", content: "GCAL 8X · IF Clarity — Image Post", status: "scheduled" },
+  { day: 2, time: "12:00 PM", platform: "x",        content: "GCAL 8X · IF Clarity — Tweet",      status: "scheduled" },
+  // Day 3: Bespoke Diamond Creation
+  { day: 3, time: "9:00 AM",  platform: "linkedin", content: "Bespoke Creation — Launch Article", status: "scheduled" },
+  { day: 3, time: "10:00 AM", platform: "email",    content: "Bespoke Creation — Newsletter",     status: "scheduled" },
+  { day: 3, time: "12:00 PM", platform: "x",        content: "Bespoke Creation — Thread",         status: "scheduled" },
+  { day: 3, time: "7:30 PM",  platform: "instagram",content: "Bespoke Creation — Reel",           status: "scheduled" },
+  { day: 3, time: "8:00 PM",  platform: "tiktok",   content: "Bespoke Creation — Short",          status: "scheduled" },
+  // Day 4: Inside Surat
+  { day: 4, time: "10:00 AM", platform: "blog",     content: "Inside Surat — Blog Post",          status: "scheduled" },
+  { day: 4, time: "9:00 AM",  platform: "linkedin", content: "Inside Surat — Article",            status: "scheduled" },
+  { day: 4, time: "1:00 PM",  platform: "facebook", content: "Inside Surat — Image Post",         status: "scheduled" },
+  { day: 4, time: "7:30 PM",  platform: "instagram",content: "Inside Surat — Carousel",           status: "scheduled" },
+  { day: 4, time: "8:00 PM",  platform: "tiktok",   content: "Inside Surat — Short",              status: "scheduled" },
+  // Day 5: Fancy Coloured + HPHT
+  { day: 5, time: "7:30 PM",  platform: "instagram",content: "Fancy Coloured + HPHT — Reel",      status: "scheduled" },
+  { day: 5, time: "8:00 PM",  platform: "tiktok",   content: "Fancy Coloured + HPHT — Short",     status: "scheduled" },
+  { day: 5, time: "12:00 PM", platform: "x",        content: "Fancy Coloured + HPHT — Tweet",     status: "scheduled" },
+  { day: 5, time: "1:00 PM",  platform: "facebook", content: "Fancy Coloured + HPHT — Image Post",status: "scheduled" },
+  // Day 6: Book a Booth Visit
+  { day: 6, time: "9:00 AM",  platform: "email",    content: "Book a Booth Visit — Newsletter",   status: "scheduled" },
+  { day: 6, time: "10:00 AM", platform: "blog",     content: "Book a Booth Visit — Blog Post",    status: "scheduled" },
+  { day: 6, time: "7:30 PM",  platform: "instagram",content: "Book a Booth Visit — Reel",         status: "scheduled" },
+  { day: 6, time: "12:00 PM", platform: "x",        content: "Book a Booth Visit — Tweet",        status: "scheduled" },
+  { day: 6, time: "1:00 PM",  platform: "facebook", content: "Book a Booth Visit — Image Post",   status: "scheduled" },
 ]
 
 // ─── Component ───────────────────────────────────────────────────────
@@ -190,6 +267,20 @@ export default function DemoPage() {
   const [selectedPlatform, setSelectedPlatform] = useState("instagram")
   const [aiCaptions, setAiCaptions] = useState<any>(null)
   const [autoPostEnabled, setAutoPostEnabled] = useState(false)
+
+  // Pre-generation planning: overall campaign vision + per-platform brief & post count.
+  const [globalVision, setGlobalVision] = useState("")
+  const [platformPlans, setPlatformPlans] = useState<Record<string, { brief: string; postCount: number }>>({
+    instagram: { brief: "", postCount: 3 },
+    tiktok:    { brief: "", postCount: 2 },
+    linkedin:  { brief: "", postCount: 2 },
+    x:         { brief: "", postCount: 4 },
+    facebook:  { brief: "", postCount: 2 },
+    blog:      { brief: "", postCount: 1 },
+    email:     { brief: "", postCount: 1 },
+  })
+  const updatePlan = (id: string, patch: Partial<{ brief: string; postCount: number }>) =>
+    setPlatformPlans((prev) => ({ ...prev, [id]: { ...prev[id], ...patch } }))
 
   // Insights
   const [insightsOpen, setInsightsOpen] = useState(false)
@@ -594,24 +685,142 @@ export default function DemoPage() {
 
           <div className="max-w-7xl mx-auto px-6 py-6 space-y-6">
 
-            {/* ── Generate bar ── */}
-            {!generated && (
-              <div className="rounded-2xl border border-border bg-muted/20 p-8 text-center">
-                <Sparkles className="h-10 w-10 mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Generate Content for All Platforms</h3>
-                <p className="text-sm text-muted-foreground max-w-md mx-auto mb-6">
-                  One click creates tailored content for Instagram, TikTok, LinkedIn, X, and Facebook — using your brand identity.
-                </p>
-                <button
-                  onClick={generateContent}
-                  disabled={generating}
-                  className="px-8 py-3 rounded-xl bg-foreground text-background text-sm font-semibold transition-all disabled:opacity-50 inline-flex items-center gap-2"
-                >
-                  {generating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Zap className="h-4 w-4" />}
-                  {generating ? "Generating for all platforms..." : "Generate Content"}
-                </button>
-              </div>
-            )}
+            {/* ── Per-platform planning form ── */}
+            {!generated && (() => {
+              const totalPosts = Object.values(platformPlans).reduce((s, p) => s + p.postCount, 0)
+              const activePlatforms = Object.values(platformPlans).filter((p) => p.postCount > 0).length
+              return (
+                <div className="space-y-5">
+                  {/* Active campaign banner — anchors every brief to JCK 2026 */}
+                  <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 via-amber-50/40 to-background p-5">
+                    <div className="flex items-start gap-4">
+                      <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shrink-0 shadow-sm">
+                        <Calendar className="h-5 w-5 text-white" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full">Active Campaign</span>
+                          <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-700">{EVENT.yearsExhibiting} years exhibiting · since {EVENT.sinceYear}</span>
+                        </div>
+                        <h3 className="text-lg font-semibold mt-1.5">{EVENT.name} · Booth {EVENT.booth}</h3>
+                        <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{EVENT.tagline}</p>
+                        <div className="mt-3 flex flex-wrap gap-1.5">
+                          {EVENT.debuting.map((item, i) => (
+                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-white border border-amber-200 text-amber-900 font-medium">
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="mt-3 flex items-center gap-4 text-[10px] text-muted-foreground">
+                          <span className="flex items-center gap-1"><MessageSquare className="h-3 w-3" /> {EVENT.audience}</span>
+                          <span className="flex items-center gap-1"><Link2 className="h-3 w-3" /> CTA: {EVENT.cta} · {EVENT.phone}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Intro + overall vision */}
+                  <div className="rounded-2xl border border-border bg-gradient-to-br from-violet-50/60 via-background to-background p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="h-10 w-10 rounded-xl bg-violet-100 flex items-center justify-center shrink-0">
+                        <Sparkles className="h-5 w-5 text-violet-600" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold">How should we push {EVENT.shortName}?</h3>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          Every platform speaks to a different slice of the JCK audience. Give the AI a brief per platform —
+                          what to feature about the booth, who you&apos;re inviting, and how many posts this week. We tailor every post around the campaign.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-5 space-y-2">
+                      <label className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                        Overall Campaign Vision <span className="text-muted-foreground/50">(applies across every platform)</span>
+                      </label>
+                      <textarea
+                        rows={2}
+                        value={globalVision}
+                        onChange={(e) => setGlobalVision(e.target.value)}
+                        placeholder={`e.g. Drive booth traffic at ${EVENT.name}. Lead with the 10-year anniversary, hero the bespoke launch, and close every post with a clear "Book a private visit at Booth ${EVENT.booth}" CTA. Prioritise reaching retailers and wholesale partners.`}
+                        className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm placeholder:text-muted-foreground/40 resize-none focus:outline-none focus:ring-2 focus:ring-violet-200"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Per-platform briefs */}
+                  <div className="grid gap-3 lg:grid-cols-2">
+                    {PLATFORMS.map((p) => {
+                      const plan = platformPlans[p.id]
+                      const hint = PLATFORM_PROMPTS[p.id]
+                      const inactive = plan.postCount === 0
+                      return (
+                        <div
+                          key={p.id}
+                          className={`rounded-2xl border bg-background p-4 space-y-3 transition-opacity ${
+                            inactive ? "border-border/50 opacity-60" : "border-border"
+                          }`}
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className={`h-8 w-8 rounded-lg bg-gradient-to-br ${p.color} flex items-center justify-center text-[10px] font-bold text-white shrink-0`}>
+                              {p.icon}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-sm font-semibold leading-tight">{p.name}</p>
+                              <p className="text-[10px] text-muted-foreground truncate">{hint.audience}</p>
+                            </div>
+                            <div className="flex items-center gap-1 rounded-lg border border-border bg-muted/30 p-0.5 shrink-0">
+                              <button
+                                type="button"
+                                onClick={() => updatePlan(p.id, { postCount: Math.max(0, plan.postCount - 1) })}
+                                className="h-6 w-6 rounded-md hover:bg-muted text-muted-foreground text-sm leading-none flex items-center justify-center"
+                              >
+                                −
+                              </button>
+                              <div className="text-xs font-semibold tabular-nums w-8 text-center">
+                                {plan.postCount}
+                                <span className="text-[8px] text-muted-foreground ml-0.5">/wk</span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() => updatePlan(p.id, { postCount: Math.min(7, plan.postCount + 1) })}
+                                className="h-6 w-6 rounded-md hover:bg-muted text-muted-foreground text-sm leading-none flex items-center justify-center"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                          <textarea
+                            rows={2}
+                            value={plan.brief}
+                            onChange={(e) => updatePlan(p.id, { brief: e.target.value })}
+                            placeholder={hint.placeholder}
+                            disabled={inactive}
+                            className="w-full rounded-lg border border-border bg-muted/20 px-3 py-2 text-xs leading-relaxed placeholder:text-muted-foreground/40 resize-none focus:outline-none focus:ring-2 focus:ring-violet-200 disabled:cursor-not-allowed"
+                          />
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  {/* Generate footer */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl border border-border bg-muted/20 p-4">
+                    <div className="text-xs text-muted-foreground">
+                      <span className="font-semibold text-foreground tabular-nums">{totalPosts}</span> posts planned across{" "}
+                      <span className="font-semibold text-foreground">{activePlatforms}</span> platform{activePlatforms === 1 ? "" : "s"}
+                      {totalPosts === 0 && <span className="text-amber-600 ml-2">— bump at least one platform to ≥ 1 post</span>}
+                    </div>
+                    <button
+                      onClick={generateContent}
+                      disabled={generating || totalPosts === 0}
+                      className="px-6 py-2.5 rounded-xl bg-foreground text-background text-sm font-semibold transition-all disabled:opacity-40 inline-flex items-center justify-center gap-2"
+                    >
+                      {generating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Zap className="h-4 w-4" />}
+                      {generating ? "Generating tailored content..." : "Generate Content"}
+                    </button>
+                  </div>
+                </div>
+              )
+            })()}
 
             {/* ── Platform content ── */}
             {generated && (
@@ -653,11 +862,17 @@ export default function DemoPage() {
                         </div>
                         <div className="p-5">
                           {content.video ? (
-                            <div className="aspect-[9/16] max-h-[480px] rounded-xl overflow-hidden bg-black mx-auto" style={{ maxWidth: 270 }}>
+                            <div
+                              className="rounded-xl overflow-hidden bg-black mx-auto"
+                              style={{ aspectRatio: content.previewAspect || "9 / 16", maxWidth: content.previewMaxWidth || 280 }}
+                            >
                               <video src={content.video} poster={content.image} controls playsInline className="w-full h-full object-cover" />
                             </div>
                           ) : content.image ? (
-                            <div className="relative aspect-[4/5] max-h-[400px] rounded-xl overflow-hidden bg-muted/20 mx-auto" style={{ maxWidth: 320 }}>
+                            <div
+                              className="relative rounded-xl overflow-hidden bg-muted/20 mx-auto"
+                              style={{ aspectRatio: content.previewAspect || "1 / 1", maxWidth: content.previewMaxWidth || 380 }}
+                            >
                               <img src={content.image} alt="" className="w-full h-full object-cover" />
                               {mainEditing && mainEditType === "image" && (
                                 <div className="absolute inset-0 bg-background/60 flex items-center justify-center">
@@ -1111,11 +1326,17 @@ export default function DemoPage() {
                 {/* Preview */}
                 <div className="space-y-2">
                   {baseContent.video ? (
-                    <div className="aspect-[9/16] max-h-[420px] rounded-xl overflow-hidden bg-black mx-auto" style={{ maxWidth: 240 }}>
+                    <div
+                      className="rounded-xl overflow-hidden bg-black mx-auto"
+                      style={{ aspectRatio: baseContent.previewAspect || "9 / 16", maxWidth: Math.min(240, baseContent.previewMaxWidth || 240) }}
+                    >
                       <video src={baseContent.video} poster={displayImage} controls playsInline className="w-full h-full object-cover" />
                     </div>
                   ) : displayImage ? (
-                    <div className="relative aspect-[4/5] max-h-[360px] rounded-xl overflow-hidden bg-muted/20 mx-auto" style={{ maxWidth: 280 }}>
+                    <div
+                      className="relative rounded-xl overflow-hidden bg-muted/20 mx-auto"
+                      style={{ aspectRatio: baseContent.previewAspect || "1 / 1", maxWidth: Math.min(360, baseContent.previewMaxWidth || 360) }}
+                    >
                       <img src={displayImage} alt="" className="w-full h-full object-cover" />
                       {regeneratingImage && (
                         <div className="absolute inset-0 bg-background/60 flex items-center justify-center">
